@@ -3,9 +3,36 @@
 
 $(document).ready(function(){
 
-  $('.tabs-item').on('click', function(){
+    ////////////// Akkordeon /////////////////
 
-    ////////////// Tabs ///////////////////
+  $(".products-filter__wrap .products-filter").on("click", function(){
+    
+    var $this = $(this),
+        container = $this.closest('.products'),
+        item = $this.closest('.products-filter__wrap'),
+        currentContent = item.find('.products-filter__content'),
+        duration = 600
+
+    
+    if(!item.hasClass('active')){
+
+      item.addClass('active');
+      currentContent.slideDown(duration);
+      // open.removeClass('active');
+      
+    }else{
+        
+        item.removeClass('active');
+        currentContent.slideUp();
+        // open.addClass('active');
+        
+    }
+  });
+
+  ////////////// Tabs ///////////////////
+
+
+  $('.tabs-item').on('click', function(){
 
     var $this = $(this),
         item = $this.closest('.tabs-item'),
