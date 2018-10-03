@@ -17,22 +17,23 @@
           <div class="header-top">
             <div class="container h-100">
               <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-3">
-                  <div class="logo"><img src="static/img/content/header/logo.png" alt="Logo"></div>
+                <div class="col-8 col-sm-5 col-md-3">
+                  <div class="logo"><a href="index.html"><img src="static/img/content/header/logo.png" alt="Logo"></a></div>
+                  <div class="phone-mobile"><a href="#">+7 342 235-79-82</a></div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 d-none d-md-block">
                   <div class="header-title">
                     <p>Металлическая, производственная <br>и офисная мебель</p>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-5 col-sm-5 col-md-3 d-none d-sm-block">
                   <div class="phone"><a href="#">+7 342 235-79-82</a></div>
                   <div class="timetable">
                     <p>пн - пт с 9:00 до 18:00 <br>сб и вс - выходной</p>
                   </div>
                 </div>
                 <div class="col-2">
-                  <div class="basket"><img src="static/img/general/bag.png" alt="Basket">
+                  <div class="basket"><a href="order.html"><img src="static/img/general/bag.png" alt="Basket"></a>
                     <div class="basket-cart">
                       <div class="basket-count">0</div>
                     </div>
@@ -44,12 +45,20 @@
           <div class="header-nav">
             <div class="container h-100">
               <div class="row h-100 align-items-center">
-                <div class="col-5">
+                <div class="col-6 col-sm-6 col-md-7 col-lg-5">
                   <ul class="nav-list">
                     <li><a class="nav-list__link" href="#">О компании</a><a class="nav-list__link" href="products.html">Каталог<img src="static/img/general/arrow-down.png" alt="arrow"></a><a class="nav-list__link" href="#">Оплата и доставка</a><a class="nav-list__link" href="#">Контакты</a></li>
                   </ul>
+                  <ul class="nav-list__mobile">
+                    <li><a class="nav-list__link" href="#">О компании</a><a class="nav-list__link" href="products.html">Каталог<img src="static/img/general/arrow-down.png" alt="arrow"></a><a class="nav-list__link" href="#">Оплата и доставка</a><a class="nav-list__link" href="#">Контакты</a></li>
+                  </ul>
+                  <div class="nav__mobile">
+                    <div class="nav__mobile-line nav__mobile-line-top"></div>
+                    <div class="nav__mobile-line nav__mobile-line-middle"></div>
+                    <div class="nav__mobile-line nav__mobile-line-bottom"></div>
+                  </div>
                 </div>
-                <div class="col-7">
+                <div class="col-6 col-sm-6 col-md-5 col-lg-7">
                   <div class="nav-search">
                     <input type="text" placeholder="Поиск по каталогу...">
                     <label for="btn">
@@ -62,21 +71,36 @@
           </div>
         </div>
       </header>
+      <div class="container">
+        <div class="list__crumbs"> <a href="index.html">Главная</a><span> Каталог</span></div>
+      </div>
       <section class="products">
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-12">
               <div class="section__title">
                 <p>Заголовок раздела/подраздела﻿</p>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-4 col-lg-3">
               <div class="products-filter">
                 <p class="products-filter__title">Цена:</p>
-                <div class="products-filter__line">
-                  <input type="range">
-                  <div class="filter-price filter-price__form"><span>0 &#8381; </span></div>
-                  <div class="filter-price filter-price__to"><span>96 000 &#8381;</span></div>
+                <div class="row justify-content-center">
+                  <div class="col-sm-11">
+                    <div id="slider-range"></div>
+                  </div>
+                </div>
+                <div class="row slider-labels justify-content-between">
+                  <div class="col-xs-6 caption"><span id="slider-range-value1"></span></div>
+                  <div class="col-xs-6 caption"><span id="slider-range-value2"></span></div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <form>
+                      <input type="hidden" name="min-value" value="">
+                      <input type="hidden" name="max-value" value="">
+                    </form>
+                  </div>
                 </div>
               </div>
               <div class="products-filter__wrap">
@@ -155,7 +179,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-9">
+            <div class="col-12 col-sm-8 col-lg-9">
               <ul class="tabs-list">
                 <li class="tabs-item active"><span>Кнопка в подраздел 1</span></li>
                 <li class="tabs-item"><span>Кнопка в подраздел 1</span></li>
@@ -170,31 +194,33 @@
                   <div class="products__desc">
                     <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</p>
                   </div>
-                  <div class="products__select">
-                    <form>
+                  <div class="products-select__list">
+                    <div class="products-select">
                       <select for="sort">
-                        <option id="sort" value="по цене">Сортировать по цене</option>
-                        <option id="sort" value="по популярности">по популярности</option>
-                        <option id="sort" value="по дате">по дате</option>
-                        <option id="sort" value="по наличию">по наличию</option>
-                        <option id="sort" value="по названию">по названию</option>
+                        <option id="sort" value="">Сортировать по цене</option>
+                        <option id="sort" value="">Сортировать по популярности</option>
+                        <option id="sort" value="">Сортировать по дате</option>
+                        <option id="sort" value="">Сортировать по наличию</option>
+                        <option id="sort" value="">Сортировать по названию</option>
                       </select>
+                    </div>
+                    <div class="products-select">
                       <select for="sort">
-                        <option id="sort" value="">Показывать по 15</option>
-                        <option id="sort" value="">30</option>
-                        <option id="sort" value="">60</option>
-                        <option id="sort" value="">90</option>
-                        <option id="sort" value="">300</option>
-                      </select><a class="circle-link" href="#"></a><a class="circle-link" href="#"></a>
-                    </form>
+                        <option id="sort" value="">Показывать на странице 20</option>
+                        <option id="sort" value="">Показывать на странице 30</option>
+                        <option id="sort" value="">Показывать на странице 60</option>
+                        <option id="sort" value="">Показывать на странице 90</option>
+                        <option id="sort" value="">Показывать на странице 300</option>
+                      </select>
+                    </div>
+                    <div class="product-list__link"><a class="circle-link" href="products-line.html"><span class="circle-link__line circle-link__line-top"></span><span class="circle-link__line"></span><span class="circle-link__line circle-link__line-bottom"></span></a><a class="circle-link" href="products.html">
+                        <div class="circle-link__coubs"><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span></div></a></div>
                   </div>
                   <div class="product-items">
                     <div class="product-item__line">
                       <div class="product-item__img"><img src="static/img/content/product/1.png" alt="Product"></div>
                       <div class="product-item__info">
-                        <div class="product-item__title">
-                          <p>Оружейный сейф воробей <br>(Чирок 1018)</p><span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="#">Подробнее</a>
-                        </div>
+                        <p class="product-item__title">Оружейный сейф воробей <br>(Чирок 1018)<span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="product.html">Подробнее</a></p>
                       </div>
                       <div class="product-item__active">
                         <div class="product-item__count">
@@ -211,9 +237,7 @@
                     <div class="product-item__line">
                       <div class="product-item__img"><img src="static/img/content/product/1.png" alt="Product"></div>
                       <div class="product-item__info">
-                        <div class="product-item__title">
-                          <p>Оружейный сейф воробей <br>(Чирок 1018)</p><span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="#">Подробнее</a>
-                        </div>
+                        <p class="product-item__title">Оружейный сейф воробей <br>(Чирок 1018)<span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="product.html">Подробнее</a></p>
                       </div>
                       <div class="product-item__active">
                         <div class="product-item__count">
@@ -230,9 +254,95 @@
                     <div class="product-item__line">
                       <div class="product-item__img"><img src="static/img/content/product/1.png" alt="Product"></div>
                       <div class="product-item__info">
-                        <div class="product-item__title">
-                          <p>Оружейный сейф воробей <br>(Чирок 1018)</p><span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="#">Подробнее</a>
+                        <p class="product-item__title">Оружейный сейф воробей <br>(Чирок 1018)<span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="product.html">Подробнее</a></p>
+                      </div>
+                      <div class="product-item__active">
+                        <div class="product-item__count">
+                          <p class="product-item__count-title">Количество</p>
+                          <p class="product-item__count-number">3</p>
                         </div>
+                        <div class="product-item__count">
+                          <button class="count-down">+</button>
+                          <button class="count-up">-</button>
+                        </div>
+                        <button class="product-item__btn">В корзину</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paginator"><a class="paginator-link" href="#"><svg width="5.969" height="10" viewBox="0 0 5.969 10">
+<path d="M978.781,3199.05a0.621,0.621,0,0,1,.125.09c0.923,0.96,1.845,1.92,2.767,2.87a0.972,0.972,0,0,1,0,1.45l-0.23.24a0.875,0.875,0,0,1-1.338,0c-0.74-.76-1.478-1.53-2.217-2.3q-0.775-.81-1.551-1.62a1.078,1.078,0,0,1,0-1.53c1.247-1.3,2.494-2.59,3.741-3.89a0.876,0.876,0,0,1,1.382,0c0.08,0.08.16,0.16,0.24,0.25a0.959,0.959,0,0,1,0,1.38c-0.93.97-1.861,1.93-2.793,2.9a0.73,0.73,0,0,1-.117.1Z" transform="translate(-976.031 -3194.03)"/>
+</svg></a><a class="paginator-link" href="#">1</a><a class="paginator-link" href="#">2</a><a class="paginator-link" href="#">...</a><a class="paginator-link" href="#">10</a><a class="paginator-link" href="#">11</a><a class="paginator-link" href="#"><svg width="6" height="10.03" viewBox="0 0 6 10.03">
+<path d="M1220.22,3198.96a0.913,0.913,0,0,1-.13-0.08c-0.92-.96-1.84-1.93-2.76-2.89a0.969,0.969,0,0,1-.01-1.45c0.08-.08.16-0.16,0.23-0.24a0.877,0.877,0,0,1,1.34,0l2.22,2.31c0.52,0.54,1.03,1.08,1.55,1.62a1.1,1.1,0,0,1,0,1.54q-1.875,1.95-3.74,3.9a0.884,0.884,0,0,1-1.39,0c-0.08-.08-0.16-0.16-0.24-0.25a0.96,0.96,0,0,1,0-1.38c0.93-.97,1.87-1.94,2.8-2.91a0.524,0.524,0,0,1,.11-0.1C1220.21,3199.01,1220.21,3198.98,1220.22,3198.96Z" transform="translate(-1217 -3194)"/>
+</svg></a></div>
+                  <div class="products__desc">
+                    <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и, прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего, создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+                  </div>
+                </li>
+                <li class="tabs-content-item">
+                  <div class="products__desc">
+                    <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</p>
+                  </div>
+                  <div class="products-select__list">
+                    <div class="products-select">
+                      <select for="sort">
+                        <option id="sort" value="">Сортировать по цене</option>
+                        <option id="sort" value="">Сортировать по популярности</option>
+                        <option id="sort" value="">Сортировать по дате</option>
+                        <option id="sort" value="">Сортировать по наличию</option>
+                        <option id="sort" value="">Сортировать по названию</option>
+                      </select>
+                    </div>
+                    <div class="products-select">
+                      <select for="sort">
+                        <option id="sort" value="">Показывать на странице 20</option>
+                        <option id="sort" value="">Показывать на странице 30</option>
+                        <option id="sort" value="">Показывать на странице 60</option>
+                        <option id="sort" value="">Показывать на странице 90</option>
+                        <option id="sort" value="">Показывать на странице 300</option>
+                      </select>
+                    </div>
+                    <div class="product-list__link"><a class="circle-link" href="products-line.html"><span class="circle-link__line circle-link__line-top"></span><span class="circle-link__line"></span><span class="circle-link__line circle-link__line-bottom"></span></a><a class="circle-link" href="products.html">
+                        <div class="circle-link__coubs"><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span><span class="circle-link__coub"></span></div></a></div>
+                  </div>
+                  <div class="product-items">
+                    <div class="product-item__line">
+                      <div class="product-item__img"><img src="static/img/content/product/1.png" alt="Product"></div>
+                      <div class="product-item__info">
+                        <p class="product-item__title">Оружейный сейф воробей <br>(Чирок 1018)<span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="product.html">Подробнее</a></p>
+                      </div>
+                      <div class="product-item__active">
+                        <div class="product-item__count">
+                          <p class="product-item__count-title">Количество</p>
+                          <p class="product-item__count-number">3</p>
+                        </div>
+                        <div class="product-item__count">
+                          <button class="count-down">+</button>
+                          <button class="count-up">-</button>
+                        </div>
+                        <button class="product-item__btn">В корзину</button>
+                      </div>
+                    </div>
+                    <div class="product-item__line">
+                      <div class="product-item__img"><img src="static/img/content/product/1.png" alt="Product"></div>
+                      <div class="product-item__info">
+                        <p class="product-item__title">Оружейный сейф воробей <br>(Чирок 1018)<span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="product.html">Подробнее</a></p>
+                      </div>
+                      <div class="product-item__active">
+                        <div class="product-item__count">
+                          <p class="product-item__count-title">Количество</p>
+                          <p class="product-item__count-number">3</p>
+                        </div>
+                        <div class="product-item__count">
+                          <button class="count-down">+</button>
+                          <button class="count-up">-</button>
+                        </div>
+                        <button class="product-item__btn">В корзину</button>
+                      </div>
+                    </div>
+                    <div class="product-item__line">
+                      <div class="product-item__img"><img src="static/img/content/product/1.png" alt="Product"></div>
+                      <div class="product-item__info">
+                        <p class="product-item__title">Оружейный сейф воробей <br>(Чирок 1018)<span class="product-item__price">3.211 руб.</span><a class="product-item__link" href="product.html">Подробнее</a></p>
                       </div>
                       <div class="product-item__active">
                         <div class="product-item__count">
@@ -261,13 +371,30 @@
           </div>
         </div>
       </section>
+      <section class="map">
+        <div id="map"></div>
+        <div class="container">
+          <div class="row">
+            <div class="map-info">
+              <div class="map-info__logo"><img src="static/img/content/header/logo.png" alt="Logo"></div>
+              <div class="map-info__title"> 
+                <p>Контактная информация: </p>
+              </div>
+              <p class="map-info__contacts"><span>Адрес: </span>г.Пермь, <br>Ул Николая Островского, д. 6</p>
+              <p class="map-info__contacts"><span>Пн-пт: </span>9:00 - 18:00</p>
+              <p class="map-info__contacts"><span>Сб и вс: </span>выходной</p>
+              <p class="map-info__contacts"><span>E-mail: </span>mail@saturn-it.ru</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <footer>
       <div class="footer">
         <div class="footer-top">
           <div class="container">
             <div class="row">
-              <div class="col-3">
+              <div class="col-6 col-sm-3">
                 <ul class="footer-list">
                   <li class="footer-list__title"><a href="#">Металлические шкафы</a></li>
                   <li><a href="#">Для документов</a></li>
@@ -281,7 +408,7 @@
                   <li class="footer-list__title"><a href="#">Кэшбоксы</a></li>
                 </ul>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-sm-3">
                 <ul class="footer-list">
                   <li class="footer-list__title"><a href="#">Металлические стеллажи</a></li>
                   <li class="footer-list__title"><a href="#">Сейфы</a></li>
@@ -297,7 +424,7 @@
                   <li><a href="#">Автомобильные</a></li>
                 </ul>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-sm-3">
                 <ul class="footer-list">
                   <li class="footer-list__title"><a href="#">Производственная мебель</a></li>
                   <li><a href="#">Верстаки</a></li>
@@ -310,7 +437,7 @@
                   <li><a href="#">Инструментальные шкафы</a></li>
                 </ul>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-sm-3">
                 <ul class="footer-list">
                   <li class="footer-list__title"><a href="#">Медицинская мебель</a></li>
                   <li><a href="#">Медицинские шкафы</a></li>
@@ -329,8 +456,8 @@
         <div class="footer-bottom">
           <div class="container">
             <div class="row justify-content-between">
-              <div class="col-5"><span>© 2018 Сатурн Импэкс - Трейдинг. Все права защищены</span></div>
-              <div class="col-7"><span>Пользуясь данным сайтом ознакомьтесь с соглашение и вы даете согласие на обработку персональных данных и cookies.</span></div>
+              <div class="col-12 col-sm-5"><span>© 2018 Сатурн Импэкс - Трейдинг. Все права защищены</span></div>
+              <div class="col-12 col-sm-7"><span>Пользуясь данным сайтом ознакомьтесь с соглашение и вы даете согласие на обработку персональных данных и cookies.</span></div>
             </div>
           </div>
         </div>
@@ -340,5 +467,6 @@
     <script src="static/js/libs.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/RangeSlider.js"></script>
   </body>
 </html>
